@@ -34,4 +34,28 @@ public class Usuario {
     @CollectionTable(name = "usuario_rol")
     @Column(name = "RolesUsuario")
     private Set<RolUsuario> roles = new HashSet<>();
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Set<RolUsuario> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Set<RolUsuario> roles) {
+		this.roles = roles;
+	}
 }

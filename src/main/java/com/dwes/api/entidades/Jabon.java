@@ -5,12 +5,11 @@ import java.util.List;
 
 import com.dwes.api.entidades.enumerados.TipoDePiel;
 
-import jakarta.persistence.CollectionTable;
-import jakarta.persistence.ElementCollection;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -21,8 +20,7 @@ public class Jabon extends Producto {
     @Enumerated(EnumType.STRING)
     private TipoDePiel tipoDePiel;
 
-    @ElementCollection
-    @CollectionTable(name = "jabon_ingredientes", joinColumns = @JoinColumn(name = "jabon_id"))
+    @OneToMany(mappedBy = "jabon", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Ingrediente> ingredientes = new ArrayList<>();
 
 	public String getAroma() {
