@@ -1,0 +1,58 @@
+# Archivos de configuración del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación de Java
+target/
+bin/
+*.class
+
+# Configuración de IDEs y editores
+.idea/
+*.iml
+*.ipr
+*.iws
+*.vscode/
+*.sublime-workspace
+
+# Dependencias descargadas por Maven
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+dependency-reduced-pom.xml
+release.properties
+
+# Logs y archivos de salida
+logs/
+*.log
+*.out
+*.err
+
+# Archivos de bases de datos SQLite
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
+# Archivos temporales
+tmp/
+*.tmp
+*.swp
+*.swo
+
+# Configuraciones específicas del usuario
+.env
+.env.local
+.env.*.local
+
+# Archivos de Spring Boot y herramientas de desarrollo
+*.h2.db
+*.mv.db
+*.trace.db
+spring.log
+
+# Archivos de prueba generados
+test-output/
+surefire-reports/
+
